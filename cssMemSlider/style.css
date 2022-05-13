@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-    html {
+html {
     font-size: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -46,6 +46,8 @@ img {
     visibility: hidden;
 }
 
+
+/*Transition of meme images*/
 #radio2:checked ~ .slider__images .slider__carousel {
     transform: translateX(-100%);
 }
@@ -98,20 +100,22 @@ img {
     color: white;
 }
 
+/*Transition of meme descriptions*/
+
 #radio2:checked ~ .slider__controls .slider__descriptions .slider__carousel {
-    transform:translateX(-18rem);
+    transform: translateX(-18rem);
 }
 
 #radio3:checked ~ .slider__controls .slider__descriptions .slider__carousel {
-    transform:translateX(-36rem);
+    transform: translateX(-36rem);
 }
 
 #radio4:checked ~ .slider__controls .slider__descriptions .slider__carousel {
-    transform:translateX(-54rem);
+    transform: translateX(-54rem);
 }
 
 #radio5:checked ~ .slider__controls .slider__descriptions .slider__carousel {
-    transform:translateX(-72rem);
+    transform: translateX(-72rem);
 }
 
 .slider__button {
@@ -133,20 +137,21 @@ img {
     border-radius: 50%;
     width: 0.8rem;
     height: 0.8rem;
-    /* border: 0.1rem solid white; */
 }
+
+/*Controls interactivity*/
 
 .slider__button--circle:hover {
     cursor: pointer;
 }
 
 .slider__button--circle:hover
-.slider__button--inner-circle{
+.slider__button--inner-circle {
     background-color: rgba(243, 138, 53, 0.500);
 }
 
 .slider__button--circle:active
-.slider__button--inner-circle{
+.slider__button--inner-circle {
     background-color: rgba(223, 114, 25, 0.767);
 }
 
@@ -170,6 +175,7 @@ img {
     background-color: rgb(255, 115, 0);
 }
 
+/*Adaptivity for mobile*/
 @media  screen and (max-width: 768px) {
     html {
         font-size: 60%;
