@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+.wrapper {
+    width: 60%;
+    margin: 1rem auto;
+    border: 0.5rem solid white;
+    border-radius: 4%;
+}
+
+.slider__title {
+    margin: 1rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.slider__images {
+    width: 42%;
+    max-width: 31.2rem;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider__carousel {
+    display: flex;
+    width: 100%;
+    transition: 0.6s;
+}
+
+img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 31.25rem;
+}
+
+.input {
+    visibility: hidden;
+}
+
+
+/*Transition of meme images*/
+#radio2:checked ~ .slider__images .slider__carousel {
+    transform: translateX(-100%);
+}
+
+#radio3:checked ~ .slider__images .slider__carousel {
+    transform: translateX(-200%);
+}
+
+#radio4:checked ~ .slider__images .slider__carousel {
+    transform: translateX(-300%);
+}
+
+#radio5:checked ~ .slider__images .slider__carousel {
+    transform: translateX(-400%);
+}
+
+.slider__controls {
+    max-width: 31.25rem;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.slider__control {
+    display: flex;
+}
+
+.slider__descriptions {
+    display: flex;
+    overflow: hidden;
+    max-width: 15rem;
+    padding-top: 0.6rem;
+}
+
+.slider__carousel {
+    display: flex;
+    width: 100%;
+}
+
+.slider__description {
+    min-width: 15rem;
+    margin-right: 3rem;
+}
+
+.slider__text {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+/*Transition of meme descriptions*/
+
+#radio2:checked ~ .slider__controls .slider__descriptions .slider__carousel {
+    transform: translateX(-18rem);
+}
+
+#radio3:checked ~ .slider__controls .slider__descriptions .slider__carousel {
+    transform: translateX(-36rem);
+}
+
+#radio4:checked ~ .slider__controls .slider__descriptions .slider__carousel {
+    transform: translateX(-54rem);
+}
+
+#radio5:checked ~ .slider__controls .slider__descriptions .slider__carousel {
+    transform: translateX(-72rem);
+}
+
+.slider__button {
+    margin-left: 1rem;
+}
+
+.slider__button--circle {
+    background-color: black;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__button--inner-circle{
+    background-color: white;
+    border-radius: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+/*Controls interactivity*/
+
+.slider__button--circle:hover {
+    cursor: pointer;
+}
+
+.slider__button--circle:hover
+.slider__button--inner-circle {
+    background-color: rgba(243, 138, 53, 0.500);
+}
+
+.slider__button--circle:active
+.slider__button--inner-circle {
+    background-color: rgba(223, 114, 25, 0.767);
+}
+
+#radio1:checked ~ .slider__controls .slider__button:nth-child(1) .slider__button--inner-circle {
+    background-color: rgb(255, 115, 0);
+}
+
+#radio2:checked ~ .slider__controls .slider__button:nth-child(2) .slider__button--inner-circle {
+    background-color: rgb(255, 115, 0);
+}
+
+#radio3:checked ~ .slider__controls .slider__button:nth-child(3) .slider__button--inner-circle {
+    background-color: rgb(255, 115, 0);
+}
+
+#radio4:checked ~ .slider__controls .slider__button:nth-child(4) .slider__button--inner-circle {
+    background-color: rgb(255, 115, 0);
+}
+
+#radio5:checked ~ .slider__controls .slider__button:nth-child(5) .slider__button--inner-circle {
+    background-color: rgb(255, 115, 0);
+}
+
+/*Adaptivity for mobile*/
+@media  screen and (max-width: 768px) {
+    html {
+        font-size: 30%;
+    }
+    
+    .slider__controls {
+        flex-direction: column;
+    }    
+
+    .slider__control {
+        margin: 0 auto 2rem;
+    }
+}
+
