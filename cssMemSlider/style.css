@@ -11,7 +11,7 @@ html {
 }
 
 .wrapper {
-    width: 60rem;
+    width: 60%;
     margin: 1rem auto;
     border: 0.5rem solid white;
     border-radius: 4%;
@@ -25,7 +25,8 @@ html {
 }
 
 .slider__images {
-    width: 31.25rem;
+    width: 42%;
+    max-width: 31.2rem;
     margin: 0 auto;
     display: flex;
     overflow: hidden;
@@ -39,7 +40,8 @@ html {
 
 img {
     margin: 0 auto;
-    width: 31.25rem;
+    width: 100%;
+    max-width: 31.25rem;
 }
 
 .input {
